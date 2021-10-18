@@ -1,0 +1,74 @@
+.ceqPage{
+    background-color: #444;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    color: #fafafa;
+}
+
+.title{
+    font-size: 3em;
+    margin: 0;
+}
+
+.description{
+    /* width: 100%; */
+    text-align: center;
+    
+}
+
+.test {
+    width: 50%;
+    border: 3px solid rgb(145, 145, 145);
+    border-radius: 1em;
+    padding: 0.5em;
+    box-sizing: border-box;
+    /* display: flex; */
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    height: 80%;
+    width: 100%;
+    align-items: center;
+}
+
+.qestion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qestion__title{
+
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5em;
+}
+
+.answer {
+    display: flex;
+    align-items: center;
+}
+
+.answer label {
+    font-size: 1.5em;
+}
+
+.answer input {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 1em;
+}
