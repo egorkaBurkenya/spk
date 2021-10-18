@@ -1,0 +1,65 @@
+.mainPage {
+  background: #444;
+  color: #fafafa;
+}
+
+header, section, footer {
+  padding: 40px 0;
+}
+
+.sectionTitle {
+  font-size: 42px;
+}
+
+/* Qualifitations */
+.quals {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.qualCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 60%;
+}
+
+/* Center for educational qualifications */
+/* Documents */
+/* News */
+/* Contacts */
+/* Components */
+.card {
+  background: #333;
+  width: 160px;
+  padding: 12px;
+  border: #333;
+  border: 2px solid #222;
+  border-radius: 12px;
+}
+
+.card:hover {
+  background: #222;
+  cursor: pointer;
+}
+
+.cardImg {
+  width: 160px;
+}
+
+.cardText {
+  font-size: 18px;
+  text-align: center;
+}
+/*# sourceMappingURL=MainPage.module.css.map */

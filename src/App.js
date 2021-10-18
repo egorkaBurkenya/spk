@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, Router} from "react-router-dom";
+import { BrowserRouter, Route, Switch} from "react-router-dom";
 import MainPage from "./components/MainPage/MainPage"
 import CeqPage from "./components/CeqPage/CeqPage"
 
