@@ -1,6 +1,5 @@
 import React from 'react';
 import style from './MainPage.module.css'
-import qualImg from './assets/quals.png'
 
 import {useHistory} from "react-router";
 
