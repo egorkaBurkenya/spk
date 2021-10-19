@@ -9,7 +9,7 @@ const Card = ({cardPath ,cardImg, cardText}) => {
 
   return (
     <div onClick={() => history.push(cardPath)} className={style.card}>
-        <img className={style.cardImg} src={cardImg} alt="qual"/>
+        <img className={style.cardImg} src={cardImg} alt="card"/>
         <p className={style.cardText}>{cardText}</p>
     </div>
   );
