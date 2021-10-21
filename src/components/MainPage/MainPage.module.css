@@ -67,7 +67,6 @@ header, section, footer {
   /* Optional: just make scrollbar invisible */
 }
 
-/* Optional: show position indicator in red */
 .newsItem {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,7 +91,18 @@ header, section, footer {
   width: 200px;
 }
 
+.newsButton {
+  background-color: #222;
+  color: #fafafa;
+  border: none;
+  width: 80px;
+}
+
 /* Contacts */
+.contacts {
+  width: 600px;
+}
+
 .cards {
   display: -webkit-box;
   display: -ms-flexbox;

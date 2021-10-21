@@ -68,10 +68,7 @@ header, section, footer {
   width: 0;  /* Remove scrollbar space */
   background: transparent;  /* Optional: just make scrollbar invisible */
 }
-/* Optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
 
-}
 
 .newsItem {
   display: flex;
@@ -90,9 +87,16 @@ header, section, footer {
   width: 200px;
 }
 
+.newsButton {
+  background-color: #222;
+  color: #fafafa;
+  border: none;
+  width: 80px;
+}
+
 /* Contacts */
 .contacts {
-  
+  width: 600px;
 }
 
 .cards {

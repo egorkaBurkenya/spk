@@ -7,6 +7,8 @@ import javascriptImg from './assets/javascript.png'
 import pythonImg from './assets/python.png'
 import swiftImg from './assets/swift.png'
 import certificate from './assets/certificate.jpg'
+import Alfarabi from './assets/Альфараби.jpg'
+import Egor from './assets/Егор.jpg'
 
 const MainPage = () => {
 
@@ -52,9 +54,9 @@ const MainPage = () => {
             <section className={style.docs}>
                 <h2 className={style.sectionTitle}>Документы</h2>
                 <div className={style.cards}>
-                    <Card cardPath={"/certificate"} cardImg={certificate} cardText="Javascipt 2021 certificate"/>
-                    <Card cardPath={"/certificate"} cardImg={certificate} cardText="Python 2021 certificate"/>
-                    <Card cardPath={"/certificate"} cardImg={certificate} cardText="Swift 2021 certificate"/>
+                    <Card cardPath={"/certificateJavascipt"} cardImg={certificate} cardText="Javascipt 2021 certificate"/>
+                    <Card cardPath={"/certificatePython"} cardImg={certificate} cardText="Python 2021 certificate"/>
+                    <Card cardPath={"/certificateSwift"} cardImg={certificate} cardText="Swift 2021 certificate"/>
                 </div>
             </section>
             <section className={style.news}>
@@ -64,7 +66,13 @@ const MainPage = () => {
                    {!isLoading && <NewsList newsList={newsList}/>}
                 </div>
             </section>
-            <footer className={style.contacts}></footer>
+            <footer className={style.contacts}>
+                <h2 className={style.sectionTitle}>Разработчики</h2>
+                <div className={style.cards}>
+                    <Card cardPath={"/Alfarabi"} cardImg={Alfarabi} cardText="Alfarabi Sagaidullaev"/>
+                    <Card cardPath={"/Egor"} cardImg={Egor} cardText="Egor Burkenya"/>
+                </div>
+            </footer>
         </div>
 );
 };

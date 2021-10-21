@@ -7,8 +7,6 @@ const Card = ({news, newsPath ,newsImg, newsText, key}) => {
 
   const history = useHistory();
 
-  console.log(news)
-
   return (
     <div onClick={() => history.push(newsPath)} className={style.newsItem} key={key}>
         <img className={style.newsImg} src={newsImg} alt="card"/>
