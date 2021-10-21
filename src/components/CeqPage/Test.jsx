@@ -41,24 +41,30 @@ const Test = (props) => {
                 rightAnswers += 1;
             } 
         })
+        let url;
         const userLevelMath = Math.round(rightAnswers * 100 / qustionsLength)
         if (userLevelMath < 25) {
             setUserLevel('pre junior')
             localStorage[props.level] = "pre junior"
+            url = props.links.junior
         }
         else if (userLevelMath >= 25 && userLevelMath <= 33) {
             setUserLevel('junior')
             localStorage[props.level] = "junior"
+            url = url = props.links.junior 
         }
         else if (userLevelMath >= 34 && userLevelMath <= 66) {
             setUserLevel('middle')
             localStorage[props.level] = "middle"
+            url = props.links.middle  
         }
         else if (userLevelMath >= 67 && userLevelMath <= 100) {
             setUserLevel('senier')
             localStorage[props.level] = "senier"
+            url = props.links.senier   
         }
         alert(`Твой уровень: ${localStorage[props.level]}`)
+        window.location.replace(url)
 
     }
 

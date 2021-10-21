@@ -113,6 +113,24 @@ const CeqPage = () => {
         }
     ]
 
+    const links = {
+        javascript: {
+            junior: "https://github.com/azat-io/you-dont-know-js-ru/blob/master/up%20%26%20going/README.md#%D0%92%D1%8B-%D0%BD%D0%B5-%D0%B7%D0%BD%D0%B0%D0%B5%D1%82%D0%B5-js-%D0%9D%D0%B0%D1%87%D0%BD%D0%B8%D1%82%D0%B5-%D0%B8-%D0%A1%D0%BE%D0%B2%D0%B5%D1%80%D1%88%D0%B5%D0%BD%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%D1%81%D1%8C",
+            middle: "https://github.com/azat-io/you-dont-know-js-ru/blob/master/scope%20%26%20closures/README.md#%D0%92%D1%8B-%D0%BD%D0%B5-%D0%B7%D0%BD%D0%B0%D0%B5%D1%82%D0%B5-js-%D0%9E%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C-%D0%B2%D0%B8%D0%B4%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8-%D0%B8-%D0%B7%D0%B0%D0%BC%D1%8B%D0%BA%D0%B0%D0%BD%D0%B8%D1%8F",
+            senier: "https://github.com/azat-io/you-dont-know-js-ru/blob/master/es6%20%26%20beyond/README.md#you-dont-know-js-es6--beyond"
+        },
+        python: {
+            junior: "https://metanit.com/python/tutorial/",
+            middle: "https://metanit.com/python/tutorial/6.1.php",
+            senier: "https://metanit.com/python/tutorial/9.1.php"
+        },
+        swift: {
+            junior: "https://www.chitai-gorod.ru/catalog/book/1214143/?utm_source=google&utm_medium=cpc&utm_campaign=Beta_PLA_rf&utm_term=&utm_content=g|position|u|||ad|270933252449||device|c|geo||9047030|cid|1410957570|gid|54935583029|pla-1070504252837&gclid=CjwKCAjwn8SLBhAyEiwAHNTJbbsde6j8EM8sXJCP2GThu9mkQhdr2Xu11FZ1w52TwcQ-tzBOvbC1-RoCRtIQAvD_BwE",
+            middle: "https://www.chitai-gorod.ru/catalog/book/1214143/?utm_source=google&utm_medium=cpc&utm_campaign=Beta_PLA_rf&utm_term=&utm_content=g|position|u|||ad|270933252449||device|c|geo||9047030|cid|1410957570|gid|54935583029|pla-1070504252837&gclid=CjwKCAjwn8SLBhAyEiwAHNTJbbsde6j8EM8sXJCP2GThu9mkQhdr2Xu11FZ1w52TwcQ-tzBOvbC1-RoCRtIQAvD_BwE",
+            senier: "https://www.chitai-gorod.ru/catalog/book/1214143/?utm_source=google&utm_medium=cpc&utm_campaign=Beta_PLA_rf&utm_term=&utm_content=g|position|u|||ad|270933252449||device|c|geo||9047030|cid|1410957570|gid|54935583029|pla-1070504252837&gclid=CjwKCAjwn8SLBhAyEiwAHNTJbbsde6j8EM8sXJCP2GThu9mkQhdr2Xu11FZ1w52TwcQ-tzBOvbC1-RoCRtIQAvD_BwE"
+        }
+    }
+
     return (
         <Switch>
             <Route path={"/ceq/javascript"}>
@@ -120,6 +138,7 @@ const CeqPage = () => {
                 test={javascriptTest} 
                 title={"Оценка уровня владения JavaScript"}
                 level={"levelJs"}
+                links = {links.javascript}
                 />
             </Route>
             <Route path={"/ceq/python"}>
@@ -127,6 +146,7 @@ const CeqPage = () => {
                 test={pythonTest} 
                 title={"Оценка уровня владения Python"}
                 level={"levelPython"}
+                links = {links.python}
                 />
             </Route>
             <Route path={"/ceq/swift"}>
@@ -134,6 +154,7 @@ const CeqPage = () => {
                 test={swiftTest} 
                 title={"Оценка уровня владения Swift"}
                 level={"levelSwift"}
+                links = {links.swift}
                 />
             </Route> 
             <Route path={"/ceq"} component={CeqMainPage} />
