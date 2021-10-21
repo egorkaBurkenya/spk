@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch} from "react-router-dom";
-import MainPage from "./components/MainPage/MainPage"
+// import MainPage from "./components/MainPage/MainPage"
+import Main from "./components/MainPage/Main"
 import CeqPage from "./components/CeqPage/CeqPage"
 
 const App = () => {
@@ -8,7 +9,7 @@ const App = () => {
     <BrowserRouter>
       <Switch>
         <Route path={"/ceq"} component={CeqPage} />
-        <Route path={"/"} component={MainPage} />
+        <Route path={"/"} component={Main} />
       </Switch>
     </BrowserRouter>
     
