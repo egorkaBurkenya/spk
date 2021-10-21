@@ -63,3 +63,31 @@
 .test__userLevel span{
     border-bottom: 1px solid #b9e9fa;
 }
+
+.test__window{
+    display: flex;
+    flex-direction: column;
+}
+
+.test__checkBtn {
+    background-color: #202020; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    /* font-family: 'Segoe UI'; */
+}
+
+.test__checkBtn:hover {
+    background-color: #3b3b3b; /* Green */
+    color: white;
+}
+
+.level {
+    
+}
