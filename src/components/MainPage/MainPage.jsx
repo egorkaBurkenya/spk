@@ -40,14 +40,33 @@ const MainPage = () => {
     return (
         <div className={style.mainPage}>
             <h1 className={style.mainTitle}>IDK</h1>
+            <div style={{width: "100%", display: "flex", justifyContent: "center"}}>
+                <p style={{fontSize: "20px"}}>
+                Сайт сделан в рамках учебной практики.
+                все карточки кликабельны, но контент в них пока не имеет логического смысла.
+                </p>
+            </div>
             <header className={style.quals}>
                 <h2 className={style.sectionTitle}>Квалификации</h2>
                 <div className={style.cards}>
-                    <Card cardPath={"/javascript"} cardImg={javascriptImg} cardText="Javascipt 2021 qualification"/>
-                    <Card cardPath={"/python"} cardImg={pythonImg} cardText="Python 2021 qualification"/>
-                    <Card cardPath={"/swift"} cardImg={swiftImg} cardText="Swift 2021 qualification"/>
+                    <Card cardPath={"/javascript"} cardImg={javascriptImg} cardText="Javascipt 2021 qualification - тут должно быть описани квалификации"/>
+                    <Card cardPath={"/python"} cardImg={pythonImg} cardText="Python 2021 qualification - тут должно быть описани квалификации"/>
+                    <Card cardPath={"/swift"} cardImg={swiftImg} cardText="Swift 2021 qualification - тут должно быть описани квалификации"/>
                 </div>
             </header>
+
+            <div style={{width: "100%", display: "flex", justifyContent: "center"}}>
+                <p style={{fontSize: "20px"}}>
+                Для прохождения тестирование, нужно нажать кнопку расположенную ниже.
+                <ul>
+                    <li>Выберите Любой из тестов</li>
+                    <li>После прохождения остностиельно кол-во правильных ответов, вас перенаправит на соответсвующий вашему уровню ресурс</li>
+                    <li>В левом верхнем углу будет отображен уровень, полученный за прошлое прохождение теста</li> 
+                    <li>В случае наилучшего прохождения теста (65-100% правильных ответов) вас перенаправит на экзамен, где вы сможете получить сертификат </li>
+                </ul>
+                </p>
+            </div>
+
             <section className={style.ceq}>
                 <button onClick={() => history.push('/ceq')} className={style.ceqButton}>Получить квалификацию</button>
             </section>

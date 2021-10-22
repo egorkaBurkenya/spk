@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { Route, Switch} from "react-router-dom";
 import CeqMainPage from "./CeqMainPage";
+import CeqSert from './CeqSert';
 import Test from "./Test";
 
 const CeqPage = () => {
@@ -15,7 +16,7 @@ const CeqPage = () => {
                 "Гибкую", 
                 "Обратную"
             ],
-            rightAnswer: "Строгую"
+            rightAnswer: "Не строгую"
         },
         {
             number: 2,
@@ -117,22 +118,76 @@ const CeqPage = () => {
         javascript: {
             junior: "https://github.com/azat-io/you-dont-know-js-ru/blob/master/up%20%26%20going/README.md#%D0%92%D1%8B-%D0%BD%D0%B5-%D0%B7%D0%BD%D0%B0%D0%B5%D1%82%D0%B5-js-%D0%9D%D0%B0%D1%87%D0%BD%D0%B8%D1%82%D0%B5-%D0%B8-%D0%A1%D0%BE%D0%B2%D0%B5%D1%80%D1%88%D0%B5%D0%BD%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%D1%81%D1%8C",
             middle: "https://github.com/azat-io/you-dont-know-js-ru/blob/master/scope%20%26%20closures/README.md#%D0%92%D1%8B-%D0%BD%D0%B5-%D0%B7%D0%BD%D0%B0%D0%B5%D1%82%D0%B5-js-%D0%9E%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C-%D0%B2%D0%B8%D0%B4%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8-%D0%B8-%D0%B7%D0%B0%D0%BC%D1%8B%D0%BA%D0%B0%D0%BD%D0%B8%D1%8F",
-            senier: "https://github.com/azat-io/you-dont-know-js-ru/blob/master/es6%20%26%20beyond/README.md#you-dont-know-js-es6--beyond"
-        },
+            senier: "/ceq/javascript/ex"
+           },
         python: {
             junior: "https://metanit.com/python/tutorial/",
             middle: "https://metanit.com/python/tutorial/6.1.php",
-            senier: "https://metanit.com/python/tutorial/9.1.php"
+            senier: "/ceq/python/ex"
         },
         swift: {
             junior: "https://www.chitai-gorod.ru/catalog/book/1214143/?utm_source=google&utm_medium=cpc&utm_campaign=Beta_PLA_rf&utm_term=&utm_content=g|position|u|||ad|270933252449||device|c|geo||9047030|cid|1410957570|gid|54935583029|pla-1070504252837&gclid=CjwKCAjwn8SLBhAyEiwAHNTJbbsde6j8EM8sXJCP2GThu9mkQhdr2Xu11FZ1w52TwcQ-tzBOvbC1-RoCRtIQAvD_BwE",
             middle: "https://www.chitai-gorod.ru/catalog/book/1214143/?utm_source=google&utm_medium=cpc&utm_campaign=Beta_PLA_rf&utm_term=&utm_content=g|position|u|||ad|270933252449||device|c|geo||9047030|cid|1410957570|gid|54935583029|pla-1070504252837&gclid=CjwKCAjwn8SLBhAyEiwAHNTJbbsde6j8EM8sXJCP2GThu9mkQhdr2Xu11FZ1w52TwcQ-tzBOvbC1-RoCRtIQAvD_BwE",
-            senier: "https://www.chitai-gorod.ru/catalog/book/1214143/?utm_source=google&utm_medium=cpc&utm_campaign=Beta_PLA_rf&utm_term=&utm_content=g|position|u|||ad|270933252449||device|c|geo||9047030|cid|1410957570|gid|54935583029|pla-1070504252837&gclid=CjwKCAjwn8SLBhAyEiwAHNTJbbsde6j8EM8sXJCP2GThu9mkQhdr2Xu11FZ1w52TwcQ-tzBOvbC1-RoCRtIQAvD_BwE"
+            senier: "/ceq/swift/ex"
+        }
+    }
+
+    const exLinks = {
+        javascript: {
+            junior: "/ceq/js/sert",
+            middle: "/ceq/js/sert",
+            senier: "/ceq/js/sert"
+        },
+        python: {
+            junior: "/ceq/py/sert",
+            middle: "/ceq/py/sert",
+            senier: "/ceq/py/sert"
+        },
+        swift: {
+            junior: "/ceq/swift/sert",
+            middle: "/ceq/swift/sert",
+            senier: "/ceq/swift/sert"
         }
     }
 
     return (
         <Switch>
+            <Route path={"/ceq/py/sert"}>
+                <CeqSert lang={"Python"} level={"levelPython"}/>
+            </Route>
+            <Route path={"/ceq/js/sert"}>
+                <CeqSert lang={"JavaScript"} level={"levelJs"}/>
+            </Route>
+            <Route path={"/ceq/py/sert"}>
+                <CeqSert lang={"Swift"} level={"levelSwift"}/>
+            </Route>
+            <Route path={"/ceq/swift/ex"}>
+            <Test 
+                test={pythonTest} 
+                title={"Экамен по Swift"}
+                level={"levelSwift"}
+                links = {exLinks.swift}
+                type={"ex"}
+                />
+            </Route>
+            <Route path={"/ceq/python/ex"}>
+            <Test 
+                test={pythonTest} 
+                title={"Экамен по Python"}
+                level={"levelPython"}
+                links = {exLinks.python}
+                type={"ex"}
+                />
+            </Route>
+            <Route path={"/ceq/javascript/ex"}>
+            <Test 
+                test={javascriptTest} 
+                title={"Экамен по JavaScript"}
+                level={"levelJs"}
+                links = {exLinks.javascript}
+                type={"ex"}
+                />
+            </Route>
             <Route path={"/ceq/javascript"}>
             <Test 
                 test={javascriptTest} 

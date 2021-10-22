@@ -6,12 +6,18 @@ import pythonImg from '../MainPage/assets/python.png'
 import swiftImg from '../MainPage/assets/swift.png'
 import Card from "../MainPage/Card"
 
+import {Link} from 'react-router-dom';
+
 const CeqMainPage = () => {
     return (
         <div className={style.ceqPage}>
-            <h1 className={style.title}>
-                Оценка уровня знания языка
-            </h1>
+            <div style={{display: 'flex', justifyContent: 'space-evenly', width: '100%'}}>
+                <Link to={"/"} className={style.test__backBtn}>Назад</Link>
+                <h1 className={style.title}>
+                    Оценка уровня знания языка
+                </h1>
+                <div />
+            </div>
             <p className={style.description}>
                 Выберите язык, по которому хотите пройти квалификацию
             </p>

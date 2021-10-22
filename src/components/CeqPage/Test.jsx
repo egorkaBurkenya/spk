@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom';
 import style from "./CeqPage.module.css";
 
 const Test = (props) => {
+
+    const history = useHistory();
 
     const test = props.test
 
@@ -59,12 +61,16 @@ const Test = (props) => {
             url = props.links.middle  
         }
         else if (userLevelMath >= 67 && userLevelMath <= 100) {
-            setUserLevel('senier')
-            localStorage[props.level] = "senier"
+            setUserLevel('senior')
+            localStorage[props.level] = "senior"
             url = props.links.senier   
         }
-        alert(`Твой уровень: ${localStorage[props.level]}`)
-        window.location.replace(url)
+        if (props.type !== "ex") {
+            alert(`Твой уровень: ${localStorage[props.level]} ${localStorage[props.level] == "senior" ? "Сейчас ты будешь перенаправлен на экзмаен" : ""}`)
+        }
+        if (localStorage[props.level] == "senior" || props.type === "ex") {
+            history.push(url)
+        } else window.location.replace(url)
 
     }
 
@@ -85,6 +91,12 @@ const Test = (props) => {
                     </p>
                 </div>
             </div>
+            <h3 style={{margin: '0'}}>
+                Правильные ответы(Для тестировки работы приложения)
+            </h3>
+            <ul>
+                {test.map(q => <li>{q.number} {q.rightAnswer}</li>)}
+            </ul>
             <div className={style.test__window} style={{overflow: 'auto'}}>
                 {test.map(qusion => 
                 <div className={style.test__qusion}>
